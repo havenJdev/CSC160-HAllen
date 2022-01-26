@@ -1,2 +1,2 @@
-# CSC166-HAllen
-CSC 166 Java
+# CSC160-HAllen
+CSC 160 Java
