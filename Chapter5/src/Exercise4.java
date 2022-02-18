@@ -17,6 +17,7 @@ public class Exercise4 {
 		scanner.close();
 	}
 	public static String getWeekDay(int day) {
+		// could use switch case but meh
 		if(day == 1) {
 			return "Sunday";
 		} else if(day == 2) {
