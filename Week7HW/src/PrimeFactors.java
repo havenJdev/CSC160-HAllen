@@ -2,7 +2,6 @@ public class PrimeFactors {
 
 	public static void main(String[] args) {
 		int[] arr = {1,2,3,5,7,11,13,17,19,23,29,31,37};
-		boolean[] prim = sieve(24);
 		System.out.println("Result: " + arePrimeFactors(arr,7420738134810L)); //expected: true
 		System.out.println("Result: " + arePrimeFactors(arr,2667845L)); //expected: false
 		arr[2] = 4;
