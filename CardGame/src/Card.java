@@ -17,7 +17,7 @@ public class Card {
 			throw new ArithmeticException("Argument #1 (" + suit + ") out of range for range 0-3");
 		}
 		if(rank < 1 || rank > 14) {
-			throw new ArithmeticException("Argument #1 (" + suit + ") out of range for range 1-13");
+			throw new ArithmeticException("Argument #2 (" + rank + ") out of range for range 1-13");
 		}
 		this.suit = suit;
 		this.rank = rank;
