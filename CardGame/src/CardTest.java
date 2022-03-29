@@ -21,17 +21,20 @@ public class CardTest {
 //		}
 //		System.out.println(Arrays.toString(cards));
 		Deck deck = new Deck();
+//		System.out.println(deck.tostring());
+//		System.out.println(deck.subDeck(0, 26).tostring());
+//		
+//		//deck.shuffle();
+//		System.out.println(deck.tostring());
+//	
+//		Deck subdeck = deck.subDeck(26,52);
+//		
+//		Pile pile = new Pile();
+//		pile.addDeck(subdeck);
+//		System.out.println(pile.tostring());
 		System.out.println(deck.tostring());
-		System.out.println(deck.subDeck(0, 26).tostring());
-		
-		//deck.shuffle();
+		deck.selectionSort();
 		System.out.println(deck.tostring());
-	
-		Deck subdeck = deck.subDeck(26,52);
-		
-		Pile pile = new Pile();
-		pile.addDeck(subdeck);
-		System.out.println(pile.tostring());
 		
 	}
 }

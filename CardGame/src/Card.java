@@ -39,12 +39,38 @@ public class Card {
 	}
 	
 	public int compareTo(Card other) {
-		if(this.rank < other.getRank()) {
-			return -1;
-		} else if (this.rank > other.getRank()) {
-			return 1;
+		if(this.suit < other.getSuit()) {
+			if(this.rank < other.getRank()) {
+				return -1;
+			} else if(this.rank > other.getRank()) {
+				return 1;
+			} else {
+				return -1;
+			}
+		} else if(this.suit < other.getSuit()) {
+			if(this.rank < other.getRank()) {
+				return -1;
+			} else if(this.rank > other.getRank()) {
+				return 1;
+			} else {
+				return 1;
+			}
 		} else {
-			return 0;
+			if(this.rank < other.getRank()) {
+				return -1;
+			} else if(this.rank > other.getRank()) {
+				return 1;
+			} else {
+				return 0;
+			}
 		}
+		
+//		if((this.rank < other.getRank() && this.suit < other.getSuit()) || this.rank < other.getRank() ) {
+//			return -1;
+//		} else if ((this.rank > other.getRank() && this.suit > other.getSuit()) || this.rank > other.getRank() ) {
+//			return 1;
+//		} else {
+//			return 0;
+//		}
 	}
 }
