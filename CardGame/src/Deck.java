@@ -1,7 +1,7 @@
 import java.util.Random;
 
 public class Deck {
-	private Card[] cards;
+	public Card[] cards;
 	private Random random = new Random();
 	
 	public Deck() {
@@ -44,17 +44,15 @@ public class Deck {
 	}
 	
 	public Deck subDeck(int start, int end) {
-		int len = end - start;
-		Deck subbed = new Deck(len);
-		int n = 0;
-		for(int i = start; i < end; i++) {
-			subbed.cards[n] = this.cards[i];
-			n++;
-		}
-		return subbed;
+        Deck sub = new Deck(end - start + 1);
+        for (int i = 0; i < sub.cards.length; i++) {
+            sub.cards[i] = this.cards[start + i];
+        }
+        return sub;
 	}
 	
-	//Hey, I wrote a program that visualized selection sort graphically for my 119 final. Fun!
+	
+	//Hey, I wrote a program that visualized sorts graphically for my 119 final. Fun!
 	public void selectionSort() {
 		int len = this.cards.length;
 		
@@ -72,6 +70,19 @@ public class Deck {
 			}
 			//basic swap
 			swap(min_index,i);
+		}
+	}
+	
+	public void insertionSort() {
+		int len = this.cards.length;
+		for(int i = 1; i < len; i++) {
+			Card iCard = this.cards[i];
+			int j = i - 1;
+			while(i > -1 && this.cards[i].compareTo(iCard) > 0) {
+				this.cards[i+1] = this.cards[i];
+				i--;
+			}
+			this.cards[i] = iCard;
 		}
 	}
 }

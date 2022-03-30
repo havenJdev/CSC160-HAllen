@@ -33,6 +33,8 @@ public class CardTest {
 //		pile.addDeck(subdeck);
 //		System.out.println(pile.tostring());
 		System.out.println(deck.tostring());
+		deck.shuffle();
+		System.out.println(deck.tostring());
 		deck.selectionSort();
 		System.out.println(deck.tostring());
 		

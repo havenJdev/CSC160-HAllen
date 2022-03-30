@@ -5,7 +5,7 @@ import java.util.ArrayList;
  */
 public class Pile {
 
-    private ArrayList<Card> cards;
+    public ArrayList<Card> cards;
 
     /**
      * Constructs an empty pile of cards.

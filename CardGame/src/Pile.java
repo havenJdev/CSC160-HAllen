@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 public class Pile {
-	private ArrayList<Card> cards;
+	public ArrayList<Card> cards;
 	
 	public Pile() {
 		cards = new ArrayList<>();
@@ -23,6 +23,13 @@ public class Pile {
 		for(Card card : deck.getCards()) {
 			this.addCard(card);
 		}
+	}
+	
+	public void addPile(Pile pile) {
+		for(Card card : pile.cards) {
+			this.addCard(card);
+		}
+		pile.cards.clear();
 	}
 	
 	public String tostring() {

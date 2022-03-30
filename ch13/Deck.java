@@ -60,24 +60,18 @@ public class Deck {
         return sb.toString();
     }
 
-    /**
-     * Randomly permutes the array of cards.
-     */
-    public void shuffle() {
-    }
-
-    /**
-     * Chooses a random number between low and high, including both.
-     */
-    private static int randomInt(int low, int high) {
-        return 0;
-    }
-
-    /**
-     * Swaps the cards at indexes i and j.
-     */
-    private void swapCards(int i, int j) {
-    }
+    private void swap(int first, int second) {
+		Card temp = this.cards[first];
+		this.cards[first] = this.cards[second];
+		this.cards[second] = temp;
+	}
+	
+	public void shuffle() {
+		for(int i = 0; i < this.cards.length; i++) {
+			int cardToSwap = random.nextInt(0, this.cards.length);
+			swap(i,cardToSwap);
+		}
+	}
 
     /**
      * Sorts the cards (in place) using selection sort.

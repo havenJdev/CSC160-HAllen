@@ -8,6 +8,7 @@ public class War {
         // create and shuffle the deck
         Deck deck = new Deck();
         deck.shuffle();
+        System.out.println(deck.toString());
 
         // divide the deck into piles
         Pile p1 = new Pile();
@@ -18,7 +19,9 @@ public class War {
         // while both piles are not empty
         while (!p1.isEmpty() && !p2.isEmpty()) {
             Card c1 = p1.popCard();
+            System.out.println(c1.getRank());
             Card c2 = p2.popCard();
+            System.out.println(c2.getRank());
 
             // compare the cards
             int diff = c1.getRank() - c2.getRank();
@@ -31,6 +34,7 @@ public class War {
             } else {
                 // it's a tie...draw four more cards
             }
+//            System.out.println(p1.cards.size() + " " + p2.cards.size());
         }
 
         // display the winner
