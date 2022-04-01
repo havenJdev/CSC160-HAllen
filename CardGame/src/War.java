@@ -36,7 +36,7 @@ public class War {
 			} else if(card1.compareTo(card2) < 0) {
 				pile2.addCard(card1);
 				pile2.addCard(card2);
-			//cards are equal (lets just give them back!)
+			//cards are equal (lets just give them back)
 			} else {
 				pile1.addCard(card1);
 				pile2.addCard(card2);

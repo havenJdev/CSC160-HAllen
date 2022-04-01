@@ -59,30 +59,31 @@ public class Deck {
 		//Loop over each element of array except the last (because the last will always end up being the biggest)
 		for(int i = 0; i < len-1; i++) {
 			//Assume the index at which the smallest value exists is i
-			int min_index = i;
+			int least = i;
 			//Loop over each element of the array starting at i+1
 			for(int j = i+1; j < len; j++) {
-				//If the card at idx j < card at idx min_index
-				if(this.cards[j].compareTo(this.cards[min_index]) == -1) {
-					//We found the index of our new smallest card. Update min_index
-					min_index = j;
+				//If the card at idx j < card at idx least
+				if(this.cards[j].compareTo(this.cards[least]) == -1) {
+					//We found the index of our new smallest card. Update least
+					least = j;
 				}
 			}
 			//basic swap
-			swap(min_index,i);
+			swap(least,i);
 		}
 	}
 	
 	public void insertionSort() {
 		int len = this.cards.length;
-		for(int i = 1; i < len; i++) {
+		for(int i = 1; i < len; ++i) {
 			Card iCard = this.cards[i];
 			int j = i - 1;
-			while(i > -1 && this.cards[i].compareTo(iCard) > 0) {
-				this.cards[i+1] = this.cards[i];
-				i--;
+			while(j > -1 && this.cards[j].compareTo(iCard) > 0) {
+				this.cards[j+1] = this.cards[j];
+				j--;
 			}
-			this.cards[i] = iCard;
+			
+			this.cards[j+1] = iCard;
 		}
 	}
 }
