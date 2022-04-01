@@ -17,11 +17,12 @@ public class War {
         p2.addDeck(deck.subdeck(26, 51));
 
         // while both piles are not empty
+        int turns = 0;
         while (!p1.isEmpty() && !p2.isEmpty()) {
             Card c1 = p1.popCard();
-            System.out.println(c1.getRank());
+//            System.out.println(c1.getRank());
             Card c2 = p2.popCard();
-            System.out.println(c2.getRank());
+//            System.out.println(c2.getRank());
 
             // compare the cards
             int diff = c1.getRank() - c2.getRank();
@@ -34,7 +35,9 @@ public class War {
             } else {
                 // it's a tie...draw four more cards
             }
-//            System.out.println(p1.cards.size() + " " + p2.cards.size());
+            turns++;
+//            System.out.println(turns);
+            System.out.println(p1.cards.size() + " " + p2.cards.size());
         }
 
         // display the winner

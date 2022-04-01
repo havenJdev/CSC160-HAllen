@@ -11,38 +11,36 @@ public class War {
 
 		System.out.println(pile1.cards.size());
 		System.out.println(pile2.cards.size());
-		
-		Pile middlePile = new Pile();
-		
+				
 		System.out.println("Running");
 		
 		int turns = 0;
 		
+		/*
+		 *  I don't think this game will ever complete if it is played like this
+		 *  Every 52^n or so turns, where n = turns / 52, the 2 piles will move closer
+		 *  towards being in an order where they just alternate back and forth
+		 *  between winning and losing. And so the game will never end
+		 */
+	
 		while(!pile1.isEmpty() && !pile2.isEmpty()) {
 			Card card1 = pile1.popCard();
 			Card card2 = pile2.popCard();
-			System.out.println(pile1.cards.size());
-			System.out.println(pile2.cards.size());
-			
-//			middlePile.addCard(card1);
-//			middlePile.addCard(card2);
+			System.out.println(pile1.cards.size() + " " + pile2.cards.size() + " " + turns);
 
-//			System.out.println(card1.compareTo(card2));
 			//card 1 greater
 			if(card1.compareTo(card2) > 0) {
-//				pile1.addPile(middlePile);
 				pile1.addCard(card1);
 				pile1.addCard(card2);
 			//card 2 greater
 			} else if(card1.compareTo(card2) < 0) {
-//				pile2.addPile(middlePile);
 				pile2.addCard(card1);
 				pile2.addCard(card2);
+			//cards are equal (lets just give them back!)
 			} else {
-//				middlePile.addCard(card1);
-//				middlePile.addCard(card2);
+				pile1.addCard(card1);
+				pile2.addCard(card2);
 			}
-			//System.out.println(pile1.isEmpty() + " " + pile2.isEmpty());
 			turns++;
 		}
 		System.out.println(turns);

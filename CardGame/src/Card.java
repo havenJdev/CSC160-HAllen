@@ -40,31 +40,46 @@ public class Card {
 	
 	
 	public int compareTo(Card other) {
-		if(this.suit < other.getSuit()) {
-			if(this.rank < other.getRank()) {
-				return -1;
-			} else if(this.rank > other.getRank()) {
-				return 1;
-			} else {
-				return -1;
-			}
-		} else if(this.suit < other.getSuit()) {
-			if(this.rank < other.getRank()) {
-				return -1;
-			} else if(this.rank > other.getRank()) {
-				return 1;
-			} else {
-				return 1;
-			}
-		} else {
-			if(this.rank < other.getRank()) {
-				return -1;
-			} else if(this.rank > other.getRank()) {
-				return 1;
-			} else {
-				return 0;
-			}
+//		if(this.suit < other.getSuit()) {
+//			if(this.rank < other.getRank()) {
+//				return -1;
+//			} else if(this.rank > other.getRank()) {
+//				return 1;
+//			} else {
+//				return -1;
+//			}
+//		} else if(this.suit < other.getSuit()) {
+//			if(this.rank < other.getRank()) {
+//				return -1;
+//			} else if(this.rank > other.getRank()) {
+//				return 1;
+//			} else {
+//				return 1;
+//			}
+//		} else {
+//			if(this.rank < other.getRank()) {
+//				return -1;
+//			} else if(this.rank > other.getRank()) {
+//				return 1;
+//			} else {
+//				return 0;
+//			}
+//		}
+		
+		if(this.suit > other.suit) {
+			return 1;
 		}
+		if(this.suit < other.suit) {
+			return -1;
+		}
+		if(this.rank > other.rank) {
+			return 1;
+		}
+		if(this.rank < other.rank) {
+			return -1;
+		}
+		return 0;
+
 		
 		
 	}

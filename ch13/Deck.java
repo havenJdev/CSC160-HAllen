@@ -55,7 +55,7 @@ public class Deck {
     	StringBuilder sb = new StringBuilder();
     	for(Card card : this.cards) {
     		sb.append(card);
-    		sb.append('\n');
+    		sb.append(", ");
     	}
         return sb.toString();
     }
