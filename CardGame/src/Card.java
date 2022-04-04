@@ -40,43 +40,22 @@ public class Card {
 	
 	
 	public int compareTo(Card other) {
-//		if(this.suit < other.getSuit()) {
-//			if(this.rank < other.getRank()) {
-//				return -1;
-//			} else if(this.rank > other.getRank()) {
-//				return 1;
-//			} else {
-//				return -1;
-//			}
-//		} else if(this.suit < other.getSuit()) {
-//			if(this.rank < other.getRank()) {
-//				return -1;
-//			} else if(this.rank > other.getRank()) {
-//				return 1;
-//			} else {
-//				return 1;
-//			}
-//		} else {
-//			if(this.rank < other.getRank()) {
-//				return -1;
-//			} else if(this.rank > other.getRank()) {
-//				return 1;
-//			} else {
-//				return 0;
-//			}
-//		}
+		//This is changed to always just return 1, so that the War game is winnable.
+		//Obviously, this breaks selection sort.
 		
 		if(this.suit > other.suit) {
 			return 1;
 		}
+		//defaut: return -1
 		if(this.suit < other.suit) {
-			return -1;
+			return 1;
 		}
 		if(this.rank > other.rank) {
 			return 1;
 		}
+		//defaut: return -1
 		if(this.rank < other.rank) {
-			return -1;
+			return 1;
 		}
 		return 0;
 
