@@ -2,8 +2,6 @@
 public class Truck extends Vehicle {
 	private int bedLength;
 	
-	
-
 	public Truck() {
 		super();
 	}
@@ -35,10 +33,10 @@ public class Truck extends Vehicle {
 		this.bedLength = bedLength;
 	}
 
-	@Override
-	public String toString() {
-		return "Truck [bedLength=" + bedLength + "]";
-	}
+//	@Override
+//	public String toString() {
+//		return "Truck [bedLength=" + bedLength + "]";
+//	}
 	
 	
 }
