@@ -9,6 +9,10 @@ public class VehicleTest {
 		System.out.println(car.toString());
 		Vehicle veh = new Vehicle();
 		System.out.println(veh.toString());
+		
+		Truck tr = new Truck();
+		System.out.println(tr);
+		
 	}
 
 }
