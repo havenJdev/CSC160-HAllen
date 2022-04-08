@@ -33,7 +33,6 @@ public class TestSchoolRecords {
 	}
 	
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
 		ArrayList<Person> people = new ArrayList<Person>();
 		people.add(new Student("John Smith", "400 Main Street", "555-293-4598", "johnsmith@email.com", "freshman"));
