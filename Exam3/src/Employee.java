@@ -3,6 +3,11 @@ public class Employee extends Person {
 	private String office;
 	private int salary;
 	private String dateHired;
+	
+	public Employee() {
+		
+	}
+	
 	public Employee(String name, String address, String phoneNumber, String email, String office, int salary,
 			String dateHired) {
 		super(name, address, phoneNumber, email);
