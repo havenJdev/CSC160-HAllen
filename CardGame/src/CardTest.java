@@ -36,7 +36,7 @@ public class CardTest {
 		deck.shuffle();
 		System.out.println(deck.tostring());
 //		deck.selectionSort();
-		deck.insertionSort();
+		deck.mergeSort();
 		System.out.println(deck.tostring());
 		
 	}

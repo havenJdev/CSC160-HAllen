@@ -48,14 +48,14 @@ public class Card {
 		}
 		//defaut: return -1
 		if(this.suit < other.suit) {
-			return 1;
+			return -1;
 		}
 		if(this.rank > other.rank) {
 			return 1;
 		}
 		//defaut: return -1
 		if(this.rank < other.rank) {
-			return 1;
+			return -1;
 		}
 		return 0;
 

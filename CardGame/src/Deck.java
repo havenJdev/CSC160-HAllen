@@ -73,6 +73,79 @@ public class Deck {
 		}
 	}
 	
+	private void helper(Card[] cards, int low, int high) {
+		if(low < this.cards.length) {
+			for(int i = low+1; i < this.cards.length; i++) {
+				if(this.cards[i].compareTo(this.cards[low]) == -1) {
+					swap(low,i);
+				}
+			}
+			helper(this.cards, low+1, this.cards.length-1);
+		}
+	}
+	
+	private void merge(Card[] cards, int low1, int high1, int low2, int high2) {
+		int np1 = high1 - low1 + 1;
+		int np2 = high2 - low2 + 1;
+
+		Card[] pile1 = new Card[np1];
+		Card[] pile2 = new Card[np2];
+
+		for(int i = 0; i < np1; i++) {
+			pile1[i] = cards[low1+i];
+		}
+		for(int i = 0; i < np2; i++) {
+			pile2[i] = cards[low2+i];
+		}
+		
+		int i = 0; 
+		int j = 0; 
+		int k = low1;
+		
+		while(i < np1 && j < np2) {
+			if(pile2[j].compareTo(pile2[j]) < 0) {
+				j++;
+			} else {
+				cards[k] = pile1[i];
+				i++;
+			}
+			k++;
+		}
+		
+		while(i < np1) {
+			cards[k] = pile1[i];
+			i++; 
+			k++;
+		}
+		while(j < np2) {
+			cards[k] = pile1[j];
+			j++; 
+			k++;
+		}
+		
+	}
+	
+	private void mergeSortHelper(Card[] cards, int low, int high) {
+		
+		if(low >= high) {
+			return;
+		}
+		
+		mergeSortHelper(cards, low, (low+high)/2);
+		mergeSortHelper(cards, (low+high)/2, high);
+		
+		merge(cards, low, (low+high)/2, ((low+high)/2)+1, high);
+		
+	}
+	
+	public void mergeSort() {
+		mergeSortHelper(cards, 0, cards.length-1);
+	}
+	
+	public void recursiveSelectionSort() {
+		helper(this.cards,0,this.cards.length-1);
+	}
+	
 	public void insertionSort() {
 		int len = this.cards.length;
 		for(int i = 1; i < len; ++i) {
