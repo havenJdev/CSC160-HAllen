@@ -1,9 +1,30 @@
+/* Copyright (c) 2022 Haven Allen
+ * 
+ */
+
 import java.util.Random;
 
+/**
+ * Models a deck of cards and provides methods for manipulating the deck
+ * 
+ * @author S02849570
+ *
+ */
+
 public class Deck {
+	
+	/**
+	 * Array of cards
+	 */
 	public Card[] cards;
+	/**
+	 * Random object for shuffling deck
+	 */
 	private Random random = new Random();
 	
+	/**
+	 * Initializes a deck of cards with the 52 cards of a standard playing card deck
+	 */
 	public Deck() {
 		cards = new Card[52];
 		for(int i = 0; i < Card.SUITS.length; i++) {
@@ -12,7 +33,10 @@ public class Deck {
 			}
 		}
 	}
-	
+	/**
+	 * Initializes a deck of cards of specified size without assigning rank or size
+	 * @param size Size of the deck
+	 */
 	public Deck(int size) {
 		cards = new Card[size];	
 	}
@@ -43,6 +67,12 @@ public class Deck {
 		}
 	}
 	
+	/**
+	 * Create a new deck containing all cards of this deck from start to end
+	 * @param start Starting index
+	 * @param end Ending index
+	 * @return Deck containing this cards of this Deck from start to end
+	 */
 	public Deck subDeck(int start, int end) {
         Deck sub = new Deck(end - start + 1);
         for (int i = 0; i < sub.cards.length; i++) {
