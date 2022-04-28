@@ -1,18 +1,18 @@
 package txtadv;
 
-public class Item {
+public class ObjectInteractable {
 	public final String name;
 	public final String description;
 	public final int uniqueID;
 	
-	public Item(String name, String description, int uniqueID) {
+	public ObjectInteractable(String name, String description, int uniqueID) {
 		this.name = name;
 		this.description = description;
 		this.uniqueID = uniqueID;
-		TextAdventureGame.ITEMS.add(this);
+		TextAdventureGame.OBJECTS.add(this);
 	}
-
-	public boolean equals(Item other) {
+	
+	public boolean equals(ObjectInteractable other) {
 		return other.uniqueID == this.uniqueID;
 	}
 }

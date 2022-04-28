@@ -1,12 +1,23 @@
-import java.util.ArrayList;
+import java.io.File;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Scanner;
 
 public class CSclasses {
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
-		ArrayList<Course> courseList = new ArrayList<Course>();
+		List<Course> courseList = new LinkedList<>();
 		
 		String type = "";
+		
+		try {
+			File courseFile = new File("courses");
+			Scanner fileRead = new Scanner(courseFile);
+		} catch (Exception e) {
+			// TODO: handle exception
+			System.exit(-1);
+		}
+		
 		
 		for(int i = 0; i < 3; i++) {
 			type = "";
