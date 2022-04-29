@@ -5,8 +5,8 @@ import txtadv.objects.ObjectDoor;
 
 public class ItemKey extends Item {
 
-	public ItemKey(String name, String description, int uID) {
-		super(name, description, uID);
+	public ItemKey(String namespace, String stringID, String name, String description, int uID) {
+		super(namespace, stringID, name, description, uID);
 		// TODO Auto-generated constructor stub
 	}
 	

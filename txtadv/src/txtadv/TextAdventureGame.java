@@ -13,7 +13,7 @@ public class TextAdventureGame {
 	public static List<ObjectInteractable> OBJECTS = new ArrayList<>();
 	
 	// Created Items
-	public static final ItemKey ITEM_DUNGEON_KEY = new ItemKey("Key", "A gold key",getItemUID());
+	public static final ItemKey ITEM_DUNGEON_KEY = new ItemKey("keys", "dungeonkey", "Key", "A gold key",getItemUID());
 	
 	// Created Objects
 	public static final ObjectDoor DOOR_DUNGEON = new ObjectDoor("Dungeon Door", "The door to a dungeon",
