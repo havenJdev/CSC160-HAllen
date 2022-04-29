@@ -17,4 +17,8 @@ public class Item {
 	public boolean equals(Item other) {
 		return other.uniqueID == this.uniqueID;
 	}
+	
+	public boolean equalsFuzzy(Item other) {
+		return other.namespacedID.equals(this.namespacedID);
+	}
 }
