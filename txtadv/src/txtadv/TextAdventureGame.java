@@ -3,6 +3,7 @@ package txtadv;
 import java.util.ArrayList;
 import java.util.List;
 
+import txtadv.Player.Direction;
 import txtadv.items.ItemKey;
 import txtadv.objects.ObjectDoor;
 
@@ -26,11 +27,15 @@ public class TextAdventureGame {
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		System.out.println(
-			DOOR_DUNGEON.use(ITEM_DUNGEON_KEY)
-		);
-		ROOM_BEACH.addObject(DOOR_DUNGEON);
-		ROOM_BEACH.addItem(ITEM_DUNGEON_KEY);
+		
+		Player player = new Player();
+		player.move(Direction.NORTH);
+		System.out.println(Long.MAX_VALUE);
+//		System.out.println(
+//			DOOR_DUNGEON.use(ITEM_DUNGEON_KEY)
+//		);
+//		ROOM_BEACH.addObject(DOOR_DUNGEON);
+//		ROOM_BEACH.addItem(ITEM_DUNGEON_KEY);
 	}
 
 	private static int getItemUID() {

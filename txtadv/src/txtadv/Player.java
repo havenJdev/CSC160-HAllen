@@ -28,15 +28,19 @@ public class Player {
 	public void move(Direction dir) {
 		switch (dir) {
 		case NORTH: {
+			System.out.println("North");
 			break;
 		}
 		case EAST: {
+			System.out.println("East");
 			break;
 		}
 		case SOUTH: {
+			System.out.println("South");
 			break;
 		}
 		case WEST: {
+			System.out.println("West");
 			break;
 		}
 		default:
